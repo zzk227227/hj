@@ -1,9 +1,42 @@
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.46875" />
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <!-- 关键：让页面在移动端自适应，禁止缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>王二火大 - 全屏</title>
+    <style>
+        /* 去掉所有默认边距，让页面撑满屏幕 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>王二火大-联机对战平台</title>
-<iframe src="https://staging.wangerhuoda.cn/" width="100%" height="600px"></iframe></body>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* 禁止页面本身滚动，让滚动发生在游戏内部 */
+            background: #000;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 把游戏网站嵌入，并允许全屏、自动播放等功能 -->
+    <iframe 
+        src="https://staging.wangerhuoda.cn/"
+        allowfullscreen="true"
+        allow="autoplay; fullscreen; accelerometer; gyroscope"
+        sandbox="allow-scripts allow-same-origin allow-modals allow-forms allow-popups">
+    </iframe>
+</body>
 </html>
